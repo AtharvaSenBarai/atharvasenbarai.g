@@ -20,10 +20,10 @@
     ></script>
 </head>
 <body>
-    <center><div style="margin:100px">
-        <span id="user" class="message">Hello, < email-id ></Email-id></span>
-        <div class="success"><span>Welcome to auth starter, You are successfully loged in!!!</span></div><br/>
-        <button class="btn btn-danger" onclick="logout()">Logout</button>
+    <center><div id="auth-container" class="d-none container text-center">
+        <h3 id="auth-text" class="font-weight-bold text-center mb-5 mt-5"></h3>
+        <button id="sign-out-btn" class="btn btn-danger font-weight-bolder btn-lg m-3">Sign Out</button>
+        <button id="email-verify-btn" class="btn btn-primary font-weight-bolder btn-lg m-3">Verify Email</button>
     </div></center>
     
     <!-- The core Firebase JS SDK is always required and must be listed first -->
