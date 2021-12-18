@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 const userLoggedIn = (user) => {
     formContainer.remove()
     $('#user').removeClass('d-none')
-    document.getElementById("user").innerHTML =`You are Logged In as ${user.email}\nVerified: ${user.emailVerified}`
+    authText.innerText = `You are Logged In as ${user.email}\nVerified: ${user.emailVerified}`
     if (user.emailVerified) {
         verifyEmailBtn.classList.add('d-none')
     } else {
