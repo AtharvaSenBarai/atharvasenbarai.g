@@ -1,3 +1,9 @@
+firebase.auth().onAuthStateChanged((user)=>{
+    if(user){
+        location.replace("welcome.html")
+    }
+})
+
 const userLoggedIn = (user) => {
     formContainer.remove()
     $('#auth-container').removeClass('d-none')
