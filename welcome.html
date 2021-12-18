@@ -28,6 +28,14 @@
 
 </body>
 
+<script>    authText.innerText = `You are Logged In as ${user.email}\nVerified: ${user.emailVerified}`
+    if (user.emailVerified) {
+        verifyEmailBtn.classList.add('d-none')
+    } else {
+        verifyEmailBtn.classList.remove('d-none')
+    }
+}
+</script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 
