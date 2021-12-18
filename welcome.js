@@ -1,6 +1,6 @@
 firebase.auth().onAuthStateChanged((user)=>{
-    if(!user){
-        location.replace("Login.html")
+    if(user){
+        location.replace("welcome.html")
     }
 })
 
@@ -14,7 +14,6 @@ const userLoggedIn = (user) => {
         verifyEmailBtn.classList.remove('d-none')
     }
 }
-
 
 function logout(){
     firebase.auth().signOut()
