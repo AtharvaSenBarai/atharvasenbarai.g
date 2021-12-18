@@ -1,5 +1,5 @@
 firebase.auth().onAuthStateChanged((user)=>{
-    if(user){
+    if(!user){
         location.replace("Login.html")
     }
 })
