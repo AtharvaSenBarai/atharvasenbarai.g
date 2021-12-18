@@ -15,6 +15,17 @@ const userLoggedIn = (user) => {
     }
 }
 
-function logout(){
-    firebase.auth().signOut()
+const userLoggedOut = () => {
+    $('body')[0].append(formContainer)
+    $('#auth-container')[0].classList.add('d-none')
+}
+
+const errorHandler = (err, isInfo = false) => {
+    if (isInfo) {
+        $('#error-heading')[0].innerText = "Info"
+    } else {
+        $('#error-heading')[0].innerText = "Error"
+    }
+    $('#error-msg')[0].innerText = err.message
+    errorModal.modal('show')
 }
