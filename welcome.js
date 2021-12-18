@@ -1,8 +1,11 @@
 firebase.auth().onAuthStateChanged((user)=>{
     if(!user){
         location.replace("Login.html")
+    }else{
+        document.getElementById("user").innerHTML = "Hello, "+user.email
     }
-    
+})
+
 const userLoggedIn = (user) => {
     formContainer.remove()
     authText.innerText = `You are Logged In as ${user.email}\nVerified: ${user.emailVerified}`
